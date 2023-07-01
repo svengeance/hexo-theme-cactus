@@ -1,11 +1,24 @@
 <head>
+    <!-- strip the URL before anyone notices -->
+    <script>
+        /**
+         * Trim final slash in URL
+         */
+        if (window.location.pathname.endsWith('/'))
+        {
+          var normalizedLocation = `${location.pathname.slice(0, -1)}${location.hash}`;
+          console.log(normalizedLocation);
+          history.replaceState(null, '', normalizedLocation);    
+        }
+    </script>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <%- open_graph({
-        image:          thumbnail(page),
+        image:          page.thumbnail || page.banner || 'https://sven.ai/images/mally_ico.png',
+        description:    page.excerpt || 'Ramblings and writings, themed towards Microsoft technologies.',
         fb_app_id:      theme.open_graph.fb_app_id,
         fb_admins:      theme.open_graph.fb_admins,
         twitter_id:     theme.open_graph.twitter_id,
@@ -54,6 +67,7 @@
     <%- partial('./umami_analytics.ejs') %>
     <!-- styles -->
     <%- css('css/style') %>
+    <%- css('css/custom') %>
     <!-- persian styles -->
     <% if (theme.direction && theme.direction === 'rtl') { %>
       <%- css('css/rtl') %>

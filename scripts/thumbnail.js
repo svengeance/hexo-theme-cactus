@@ -5,5 +5,5 @@
 *     <%- thumbnail(post) %>
 */
 hexo.extend.helper.register('thumbnail', function (post) {
-    return post.thumbnail || post.banner || '';
+    return 'test' || post.thumbnail || post.banner || 'https://sven.ai/images/mally_ico.png';
 });

@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: http://github.com/probberechts
+projects_url: https://github.com/svengeance
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -17,8 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
-
+  projects: https://github.com/svengeance
 
 # Links to your social media accounts.
 # The 'icon' keys should correspond to Fontawesome icon names
@@ -27,26 +26,24 @@ nav:
 # You can optionally add a 'label' key to set the title attribute on the link. 
 # 'icon' value will be used as title when 'label' is missing.
 social_links:
-  -
-    icon: github
-    link: http://github.com/probberechts/cactus-dark
-  -
-    icon: twitter
-    link: /
-  -
-    icon: facebook
-    link: /
-  -
-    icon: mail
-    link: mailto:name@email.com
-  -
-    icon: mastodon
-    label: mastodon.social
-    link: https://mastodon.social/@alice
-  -
-    icon: mastodon
-    label: fosstodon.org
-    link: https://fosstodon.org/@alice
+  - icon: github
+    link: https://github.com/svengeance
+
+  - icon: twitter
+    link: https://twitter.com/svenvernyi
+
+  - icon: reddit
+    link: https://www.reddit.com/user/SvenTheDev/
+
+  - icon: mail
+    link: mailto:sven.vernyi@gmail.com
+
+  - icon: linkedin
+    link: https://www.linkedin.com/in/stevevernyi/
+
+  - icon: discord
+    label: .noxian
+    link: https://discord.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -74,12 +71,12 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_updated: true
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
 copyright:
-  start_year: 2016
+  start_year: 2023
   end_year:
 
 # Customize the 404 page
@@ -88,8 +85,7 @@ copyright:
 error_404:
   enabled: true
   title: "404 Page Not Found"
-  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
-
+  description: "Not sure how you got here. If this seems like a me-issue, please feel free to passive aggressively ping me on twitter @svenvernyi."
 
 ##############################################################################
 # Look and Feel
@@ -107,9 +103,9 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/logo.png
+  url: /images/mally_ico.png
   gravatar: false
-  grayout: true
+  grayout: false
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
@@ -125,10 +121,10 @@ favicon:
     url: /images/favicon.ico
     gravatar: false
   android:
-    url: /images/favicon-192x192.png
+    url: /images/favicon-android.png
     gravatar: false
   apple:
-    url: /images/apple-touch-icon.png
+    url: /images/favicon-apple.png
     gravatar: false
 
 # The color scheme that should be used to highlight codeblocks.
@@ -143,7 +139,6 @@ colorscheme: dark
 # Maximal width of the page in rem units.
 page_width: 48
 
-
 ##############################################################################
 # Miscellaneous
 ##############################################################################
@@ -157,7 +152,6 @@ open_graph:
   fb_admins:
   twitter_id:
   google_plus:
-
 
 ##############################################################################
 # Plugins
@@ -174,16 +168,16 @@ disqus:
 
 # Fill in your Utterances data to enable Utterances comments
 utterances:
-  enabled: false
-  repo: owner/githubrepo
+  enabled: true
+  repo: svengeance/sven-blog
   issue_term: pathname
   label: Comment
   theme: github-dark
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
-  enabled: false
-  id: UA-86660611-1
+  enabled: true
+  id: G-JPJ6GMQE1Y
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
